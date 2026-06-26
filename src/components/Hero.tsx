@@ -67,103 +67,72 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative lg:h-[600px] flex items-center justify-center"
           >
-            {/* Abstract visual representation of dashboard, AI and marketing */}
-            <div className="relative w-full max-w-lg aspect-square">
-              {/* Main floating card */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                className="absolute inset-0 bg-white/40 backdrop-blur-xl border border-white/60 rounded-3xl shadow-2xl overflow-hidden"
-              >
-                <div className="p-6 border-b border-slate-100 flex items-center justify-between">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="text-xs font-medium text-slate-400">RAON Workspace</div>
-                </div>
-                <div className="p-8 grid gap-6">
-                  <div className="flex justify-between items-end">
-                    <div>
-                      <div className="text-sm font-medium text-slate-500 mb-1">Crescimento de Receita</div>
-                      <div className="text-3xl font-bold text-slate-900">+148%</div>
-                    </div>
-                    <div className="w-16 h-12 flex items-end gap-1">
-                      {[40, 70, 50, 90, 100].map((h, i) => (
-                        <motion.div 
-                          key={i}
-                          initial={{ height: 0 }}
-                          animate={{ height: `${h}%` }}
-                          transition={{ duration: 1, delay: 0.5 + i * 0.1 }}
-                          className="w-full bg-blue-500 rounded-t-sm"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4 mt-4">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
-                      <Bot className="w-6 h-6 text-blue-600 mb-2" />
-                      <div className="font-semibold text-slate-800">Automação IA</div>
-                      <div className="text-xs text-slate-500 mt-1">Ativo e Otimizando</div>
-                    </div>
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100">
-                      <Zap className="w-6 h-6 text-purple-600 mb-2" />
-                      <div className="font-semibold text-slate-800">Marketing</div>
-                      <div className="text-xs text-slate-500 mt-1">Campanhas de Alta Conversão</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+            {/* Glowing Rocket and Orbiting Social Media Icons */}
+            <div className="relative w-full max-w-lg aspect-square flex items-center justify-center">
+              
+              {/* Outer Glow */}
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none"></div>
 
-              {/* Floating Social Icons */}
-              <div className="absolute -bottom-8 left-0 right-0 flex flex-wrap justify-center gap-3 z-20">
-                {socialIcons.map((social, idx) => (
-                  <motion.div
-                    key={social.name}
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 3 + (idx % 3),
-                      ease: "easeInOut",
-                      delay: idx * 0.2
-                    }}
-                    className={`w-12 h-12 rounded-full ${social.bg} ${social.color} shadow-lg border border-white/50 flex items-center justify-center backdrop-blur-sm bg-opacity-80`}
-                    title={social.name}
-                  >
-                    {social.icon}
-                  </motion.div>
-                ))}
-              </div>
+              {/* Orbit Rings */}
+              <div className="absolute w-[70%] h-[70%] rounded-full border border-blue-500/20 border-dashed pointer-events-none animate-[spin_30s_linear_infinite_reverse]"></div>
+              <div className="absolute w-[95%] h-[95%] rounded-full border border-purple-500/20 border-dashed pointer-events-none animate-[spin_40s_linear_infinite]"></div>
 
-              {/* Floating elements */}
-              <motion.div 
-                animate={{ y: [0, 15, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
-                className="absolute -right-8 top-16 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-green-600" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-slate-900">ROI Positivo</div>
-                  <div className="text-xs text-slate-500">Alvo alcançado</div>
-                </div>
-              </motion.div>
-
+              {/* Central Rocket */}
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
-                className="absolute -left-12 bottom-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3"
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="relative z-10 w-40 h-40 drop-shadow-2xl"
               >
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-blue-600" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold text-slate-900">Análise Preditiva</div>
-                  <div className="text-xs text-slate-500">Baseada em IA</div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-orange-600 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="url(#rocketGrad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                  <defs>
+                    <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" fill="#f97316" fillOpacity="0.2" />
+                  <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" fill="url(#rocketGrad)" fillOpacity="0.2" />
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                </svg>
+              </motion.div>
+
+              {/* Orbiting Icons Container */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 w-full h-full pointer-events-none"
+              >
+                {socialIcons.map((social, idx) => {
+                  const total = socialIcons.length;
+                  const angle = (idx * (360 / total)) * (Math.PI / 180);
+                  // Alternate between inner and outer orbit radius
+                  const radius = idx % 2 === 0 ? 35 : 47.5; 
+                  
+                  const left = `calc(50% + ${Math.cos(angle) * radius}% - 24px)`;
+                  const top = `calc(50% + ${Math.sin(angle) * radius}% - 24px)`;
+
+                  return (
+                    <motion.div
+                      key={social.name}
+                      style={{ left, top }}
+                      className="absolute"
+                      // Counter-rotate the icons so they stay upright
+                      animate={{ rotate: -360 }}
+                      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                    >
+                      <motion.div
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: idx * 0.2 }}
+                        className={`w-12 h-12 rounded-full ${social.bg} ${social.color} shadow-lg shadow-${social.color.replace('text-', '')}/30 border border-white/50 flex items-center justify-center backdrop-blur-md pointer-events-auto cursor-pointer hover:scale-110 transition-transform drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]`}
+                        title={social.name}
+                      >
+                        {social.icon}
+                      </motion.div>
+                    </motion.div>
+                  );
+                })}
               </motion.div>
             </div>
           </motion.div>
