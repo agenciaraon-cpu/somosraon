@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function FloatingWhatsApp() {
   return (
@@ -15,7 +15,8 @@ export function FloatingWhatsApp() {
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-[#25D366]/30 flex items-center justify-center hover:bg-[#20bd5a] transition-colors"
       aria-label="Falar no WhatsApp"
     >
-      <MessageCircle className="w-8 h-8" />
+      <WhatsAppIcon className="w-8 h-8 fill-current" />
     </motion.a>
   );
 }
+

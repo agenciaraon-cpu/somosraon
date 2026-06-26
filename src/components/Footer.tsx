@@ -1,4 +1,5 @@
-import { Instagram, MapPin, MessageCircle, Globe } from "lucide-react";
+import { Instagram, MapPin, Globe } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -7,20 +8,18 @@ export function Footer() {
         
         {/* Brand */}
         <div className="lg:col-span-1">
-          <div className="text-2xl font-heading font-bold text-white tracking-tight mb-4">
-            RAON<span className="text-blue-500">.</span>
-          </div>
+          <img src="/logo.png" alt="RAON Logo" className="h-10 mb-4 brightness-0 invert opacity-90" />
           <p className="text-sm mb-6">
             Marketing, IA & Tecnologia
           </p>
           <div className="flex gap-4">
-            <a href="https://wa.me/5575988644742" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="WhatsApp">
-              <MessageCircle className="w-5 h-5" />
+            <a href="https://wa.me/5575988644742" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-orange-500 transition-colors" aria-label="WhatsApp">
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
             </a>
-            <a href="https://instagram.com/somosraon" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+            <a href="https://instagram.com/somosraon" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-orange-500 transition-colors" aria-label="Instagram">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="https://somosraon.netlify.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="Site">
+            <a href="https://somosraon.netlify.app" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-orange-500 transition-colors" aria-label="Site">
               <Globe className="w-5 h-5" />
             </a>
           </div>
@@ -44,17 +43,17 @@ export function Footer() {
           <h4 className="text-white font-semibold mb-6 uppercase tracking-wider text-sm">Contatos</h4>
           <ul className="space-y-4 text-sm">
             <li>
-              <a href="https://wa.me/5575988644742" className="flex items-center gap-3 hover:text-white transition-colors">
-                <MessageCircle className="w-4 h-4" /> (75) 98864-4742
+              <a href="https://wa.me/5575988644742" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-orange-500 transition-colors">
+                <WhatsAppIcon className="w-4 h-4 fill-current" /> (75) 98864-4742
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/somosraon" className="flex items-center gap-3 hover:text-white transition-colors">
+              <a href="https://instagram.com/somosraon" className="flex items-center gap-3 hover:text-orange-500 transition-colors">
                 <Instagram className="w-4 h-4" /> @somosraon
               </a>
             </li>
             <li>
-              <a href="https://somosraon.netlify.app" className="flex items-center gap-3 hover:text-white transition-colors">
+              <a href="https://somosraon.netlify.app" className="flex items-center gap-3 hover:text-orange-500 transition-colors">
                 <Globe className="w-4 h-4" /> somosraon.netlify.app
               </a>
             </li>

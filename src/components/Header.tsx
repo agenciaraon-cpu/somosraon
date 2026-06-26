@@ -29,10 +29,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
-          {/* Mock Logo text instead of image since we don't have the image file */}
-          <span className="text-2xl font-heading font-bold text-slate-900 tracking-tight">
-            RAON<span className="text-blue-600">.</span>
-          </span>
+          <img src="/logo.png" alt="RAON Logo" className="h-10" />
         </a>
 
         {/* Desktop Nav */}
@@ -41,14 +38,16 @@ export function Header() {
             <a 
               key={link.name} 
               href={link.href}
-              className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+              className="text-sm font-medium text-slate-600 hover:text-orange-500 transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a 
-            href="#contato"
-            className="px-5 py-2.5 bg-slate-900 hover:bg-blue-600 text-white text-sm font-medium rounded-full transition-all duration-300 shadow-lg shadow-blue-900/20"
+            href="https://wa.me/5575988644742"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 bg-slate-900 hover:bg-orange-500 text-white text-sm font-medium rounded-full transition-all duration-300 shadow-lg shadow-blue-900/20"
           >
             Falar com Especialista
           </a>
@@ -84,8 +83,10 @@ export function Header() {
                 </a>
               ))}
               <a 
-                href="#contato"
-                className="mt-4 px-6 py-3 bg-blue-600 text-white text-center rounded-full font-medium"
+                href="https://wa.me/5575988644742"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-6 py-3 bg-blue-600 hover:bg-orange-500 transition-colors text-white text-center rounded-full font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Falar com Especialista

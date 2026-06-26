@@ -30,14 +30,18 @@ export function Hero() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="#diagnostico" 
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium text-center flex items-center justify-center gap-2 transition-all shadow-xl shadow-blue-600/20"
+                  href="https://wa.me/5575988644742" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-blue-600 hover:bg-orange-500 text-white rounded-full font-medium text-center flex items-center justify-center gap-2 transition-all shadow-xl shadow-blue-600/20"
                 >
                   Solicitar Diagnóstico <ArrowRight className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#metodo" 
-                  className="px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 rounded-full font-medium text-center transition-all shadow-sm hover:shadow-md"
+                  href="https://wa.me/5575988644742" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-white hover:bg-orange-500 hover:text-white hover:border-orange-500 text-slate-900 border border-slate-200 rounded-full font-medium text-center transition-all shadow-sm hover:shadow-md"
                 >
                   Conhecer o Método
                 </a>

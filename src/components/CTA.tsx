@@ -38,7 +38,7 @@ export function CTA() {
             href="https://wa.me/5575988644742" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white text-lg font-bold rounded-full transition-all duration-300 shadow-xl shadow-blue-900/30 hover:scale-105 hover:shadow-2xl"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-blue-600 hover:bg-orange-500 text-white text-lg font-bold rounded-full transition-all duration-300 shadow-xl shadow-blue-900/30 hover:scale-105 hover:shadow-2xl"
           >
             Quero meu Diagnóstico <ArrowRight className="w-5 h-5" />
           </a>
