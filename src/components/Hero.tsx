@@ -1,5 +1,16 @@
 import { motion } from "motion/react";
-import { ArrowRight, BarChart3, Bot, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, TrendingUp, Zap, Instagram, Facebook, Linkedin, Mail, Globe } from "lucide-react";
+
+const socialIcons = [
+  { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, color: 'text-pink-500', bg: 'bg-pink-100' },
+  { name: 'Google', icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg>, color: 'text-red-500', bg: 'bg-red-100' },
+  { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, color: 'text-blue-600', bg: 'bg-blue-100' },
+  { name: 'TikTok', icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.2c0 1.95-.54 3.92-1.76 5.43-1.46 1.81-3.7 2.87-6.02 2.91-2.9.04-5.83-1.33-7.39-3.79-1.28-2.01-1.57-4.52-.75-6.68.8-2.11 2.51-3.83 4.61-4.55 1.53-.52 3.23-.52 4.75-.12v4.06c-.84-.26-1.78-.29-2.65-.07-.86.22-1.64.76-2.13 1.49-.66.98-.82 2.29-.4 3.39.42 1.1 1.39 1.9 2.56 2.12 1.54.29 3.25-.33 4.09-1.65.65-1.02.93-2.27.93-3.48 0-5.59-.02-11.17-.02-16.76z"/></svg>, color: 'text-slate-900', bg: 'bg-slate-200' },
+  { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, color: 'text-blue-500', bg: 'bg-blue-100' },
+  { name: 'Email', icon: <Mail className="w-5 h-5" />, color: 'text-amber-500', bg: 'bg-amber-100' },
+  { name: 'IA', icon: <Bot className="w-5 h-5" />, color: 'text-purple-500', bg: 'bg-purple-100' },
+  { name: 'Site', icon: <Globe className="w-5 h-5" />, color: 'text-teal-500', bg: 'bg-teal-100' },
+];
 
 export function Hero() {
   return (
@@ -105,6 +116,26 @@ export function Hero() {
                   </div>
                 </div>
               </motion.div>
+
+              {/* Floating Social Icons */}
+              <div className="absolute -bottom-8 left-0 right-0 flex flex-wrap justify-center gap-3 z-20">
+                {socialIcons.map((social, idx) => (
+                  <motion.div
+                    key={social.name}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 3 + (idx % 3),
+                      ease: "easeInOut",
+                      delay: idx * 0.2
+                    }}
+                    className={`w-12 h-12 rounded-full ${social.bg} ${social.color} shadow-lg border border-white/50 flex items-center justify-center backdrop-blur-sm bg-opacity-80`}
+                    title={social.name}
+                  >
+                    {social.icon}
+                  </motion.div>
+                ))}
+              </div>
 
               {/* Floating elements */}
               <motion.div 
