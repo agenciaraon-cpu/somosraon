@@ -1,0 +1,6 @@
+{
+  "name": "RAON - Consultoria",
+  "description": "Marketing, Inteligência Artificial e Tecnologia para acelerar o crescimento de empresas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
