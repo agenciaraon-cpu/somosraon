@@ -7,10 +7,8 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Method } from "./components/Method";
-import { HowItWorks } from "./components/HowItWorks";
 import { Services } from "./components/Services";
-import { Diagnostic } from "./components/Diagnostic";
-import { Execution } from "./components/Execution";
+import { TeamHighlight } from "./components/TeamHighlight";
 import { ForWhom } from "./components/ForWhom";
 import { WhyChoose } from "./components/WhyChoose";
 import { Stats } from "./components/Stats";
@@ -26,10 +24,8 @@ export default function App() {
         <Hero />
         <About />
         <Method />
-        <HowItWorks />
         <Services />
-        <Diagnostic />
-        <Execution />
+        <TeamHighlight />
         <ForWhom />
         <WhyChoose />
         <Stats />
