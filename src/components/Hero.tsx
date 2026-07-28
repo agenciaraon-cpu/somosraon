@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, BarChart3, Bot, TrendingUp, Zap, Instagram, Facebook, Linkedin, Mail, Globe } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, TrendingUp, Zap, Instagram, Facebook, Linkedin, Mail, Globe, Heart, ThumbsUp, Share2 } from "lucide-react";
 
 const socialIcons = [
   { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, color: 'text-pink-500', bg: 'bg-pink-100' },
@@ -77,25 +77,113 @@ export function Hero() {
               <div className="absolute w-[70%] h-[70%] rounded-full border border-blue-500/20 border-dashed pointer-events-none animate-[spin_30s_linear_infinite_reverse]"></div>
               <div className="absolute w-[95%] h-[95%] rounded-full border border-purple-500/20 border-dashed pointer-events-none animate-[spin_40s_linear_infinite]"></div>
 
-              {/* Central Rocket */}
+              {/* Central Premium SVG Rocket */}
               <motion.div 
-                animate={{ y: [0, -15, 0] }}
+                animate={{ y: [0, -20, 0], rotate: [-40, -38, -40] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="relative z-10 w-40 h-40 drop-shadow-2xl"
+                className="relative z-10 w-72 h-72 drop-shadow-[0_20px_50px_rgba(59,130,246,0.6)] flex items-center justify-center -translate-x-12 -translate-y-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-orange-600 rounded-full blur-2xl opacity-40 animate-pulse"></div>
-                <svg viewBox="0 0 24 24" fill="none" stroke="url(#rocketGrad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                {/* Twinkling Stars Around Rocket */}
+                <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }} transition={{ duration: 2, repeat: Infinity }} className="absolute top-10 left-10 w-3 h-3 bg-yellow-200 rounded-full blur-[1px] shadow-[0_0_15px_#fef08a]" />
+                <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }} transition={{ duration: 3, repeat: Infinity, delay: 1 }} className="absolute bottom-32 right-4 w-4 h-4 bg-blue-200 rounded-full blur-[1px] shadow-[0_0_20px_#bfdbfe]" />
+                <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }} transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }} className="absolute top-32 right-12 w-2 h-2 bg-white rounded-full blur-[1px] shadow-[0_0_15px_#ffffff]" />
+                <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }} transition={{ duration: 2.5, repeat: Infinity, delay: 1.5 }} className="absolute -bottom-4 left-16 w-3 h-3 bg-purple-300 rounded-full blur-[1px] shadow-[0_0_15px_#d8b4fe]" />
+
+                {/* Animated Fire Exhaust */}
+                <motion.div 
+                  animate={{ height: ["40%", "70%", "40%"], opacity: [0.7, 1, 0.7] }}
+                  transition={{ duration: 0.4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-20 bg-gradient-to-b from-orange-400 via-red-500 to-transparent blur-xl rounded-b-full origin-top z-0"
+                ></motion.div>
+                
+                <motion.div 
+                  animate={{ height: ["30%", "60%", "30%"], opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 0.2, repeat: Infinity, ease: "easeInOut", delay: 0.1 }}
+                  className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-10 bg-gradient-to-b from-yellow-300 via-orange-400 to-transparent blur-md rounded-b-full origin-top z-0"
+                ></motion.div>
+
+                {/* Premium SVG Rocket Body */}
+                <svg viewBox="0 0 200 200" className="w-full h-full relative z-10">
                   <defs>
-                    <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ffffff" />
+                      <stop offset="60%" stopColor="#e2e8f0" />
+                      <stop offset="100%" stopColor="#94a3b8" />
+                    </linearGradient>
+                    <linearGradient id="finGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="100%" stopColor="#1e3a8a" />
+                    </linearGradient>
+                    <linearGradient id="finRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2563eb" />
+                      <stop offset="100%" stopColor="#1e40af" />
+                    </linearGradient>
+                    <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#38bdf8" />
+                      <stop offset="100%" stopColor="#0284c7" />
+                    </linearGradient>
+                    <linearGradient id="noseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#f97316" />
+                      <stop offset="100%" stopColor="#ea580c" />
                     </linearGradient>
                   </defs>
-                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" fill="#f97316" fillOpacity="0.2" />
-                  <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" fill="url(#rocketGrad)" fillOpacity="0.2" />
-                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+
+                  {/* Thruster Base */}
+                  <path d="M 85 140 L 115 140 L 120 155 L 80 155 Z" fill="#475569" />
+                  
+                  {/* Left Fin */}
+                  <path d="M 70 110 Q 40 140 25 160 Q 60 155 75 135 Z" fill="url(#finGrad)" />
+                  {/* Right Fin */}
+                  <path d="M 130 110 Q 160 140 175 160 Q 140 155 125 135 Z" fill="url(#finRightGrad)" />
+                  {/* Center Fin */}
+                  <path d="M 100 120 L 95 165 L 105 165 Z" fill="url(#finGrad)" />
+                  
+                  {/* Rocket Body */}
+                  <path d="M 100 25 Q 135 60 135 120 C 135 135 125 145 100 145 C 75 145 65 135 65 120 Q 65 60 100 25 Z" fill="url(#bodyGrad)" />
+                  
+                  {/* Nose Cone */}
+                  <path d="M 100 25 Q 115 42 122 55 L 78 55 Q 85 42 100 25 Z" fill="url(#noseGrad)" />
+                  <path d="M 78 55 L 122 55 L 122 60 L 78 60 Z" fill="#cbd5e1" />
+
+                  {/* Window */}
+                  <circle cx="100" cy="80" r="18" fill="#94a3b8" />
+                  <circle cx="100" cy="80" r="14" fill="url(#windowGrad)" />
+                  {/* Window Highlight */}
+                  <path d="M 92 72 Q 100 68 108 72 Q 104 80 92 82" fill="#ffffff" opacity="0.6" />
+                  
+                  {/* Body Highlights/Details */}
+                  <path d="M 100 25 Q 130 60 130 120 C 130 135 125 140 100 145" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.5" />
+                  <circle cx="100" cy="115" r="3" fill="#cbd5e1" />
+                  <circle cx="100" cy="125" r="3" fill="#cbd5e1" />
                 </svg>
+              </motion.div>
+
+              {/* Floating Engagement Buttons */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.5 }}
+                className="absolute top-10 -right-6 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-xl border border-pink-100 flex items-center gap-2 pointer-events-auto cursor-pointer hover:scale-105 transition-transform"
+              >
+                <Heart className="w-5 h-5 text-pink-500 fill-pink-500" />
+                <span className="text-sm font-bold text-slate-800">10.4k</span>
+              </motion.div>
+
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+                className="absolute bottom-16 -left-10 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-xl border border-blue-100 flex items-center gap-2 pointer-events-auto cursor-pointer hover:scale-105 transition-transform"
+              >
+                <ThumbsUp className="w-5 h-5 text-blue-500 fill-blue-500" />
+                <span className="text-sm font-bold text-slate-800">+1.2k</span>
+              </motion.div>
+
+              <motion.div 
+                animate={{ y: [0, -8, 0], x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 1.5 }}
+                className="absolute bottom-4 right-0 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-xl border border-purple-100 flex items-center gap-2 pointer-events-auto cursor-pointer hover:scale-105 transition-transform"
+              >
+                <Share2 className="w-5 h-5 text-purple-500" />
+                <span className="text-sm font-bold text-slate-800">Compartilhar</span>
               </motion.div>
 
               {/* Orbiting Icons Container */}
