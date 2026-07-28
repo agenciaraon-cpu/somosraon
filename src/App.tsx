@@ -9,7 +9,7 @@ import { About } from "./components/About";
 import { Method } from "./components/Method";
 import { Services } from "./components/Services";
 import { TeamHighlight } from "./components/TeamHighlight";
-import { ForWhom } from "./components/ForWhom";
+import { Clients } from "./components/Clients";
 import { WhyChoose } from "./components/WhyChoose";
 import { Stats } from "./components/Stats";
 import { CTA } from "./components/CTA";
@@ -26,7 +26,7 @@ export default function App() {
         <Method />
         <Services />
         <TeamHighlight />
-        <ForWhom />
+        <Clients />
         <WhyChoose />
         <Stats />
         <CTA />
